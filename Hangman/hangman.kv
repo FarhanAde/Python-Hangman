@@ -1,0 +1,327 @@
+<HomeScreen>
+    orientation: "vertical"
+
+    FloatLayout:
+        Image:
+            source: "images/homeBgLeft.png"
+            size_hint: 1, 1
+
+        Label:
+            markup: True
+            text: "[font=PixelSleigh]Hangman:\n[b]The Game[/b][/font]"
+            halign: "center"
+            valign: "middle"
+            color: "black"
+            font_size: 32
+            size_hint: 0.6, 0.2
+            pos_hint: {"x": .2, "y": .45}
+        
+        Button:
+            background_normal: "images/playButton1.png"
+            background_down: "images/playButton2.png"
+            size_hint: .5, .1
+            pos_hint: {"x": .25, "y": .3}
+            on_release: root.goToWordChoice()
+        
+        Button:
+            background_normal: "images/instruction1.png"
+            background_down: "images/instruction2.png"
+            size_hint: .5, .1
+            pos_hint: {"x": .25, "y": .15}
+            on_release: root.goToInstructions()
+        
+<InstructionScreen>
+    orientation: "vertical"
+
+    FloatLayout:
+        Image:
+            source: "images/homeBgRight.png"
+            size_hint: 1, 1
+
+        Label:
+            markup: True
+            text: "[font=PixelSleigh]Instructions[/font]"
+            halign: "center"
+            color: "black"
+            font_size: 25
+            size_hint: 0.6, 0.2
+            pos_hint: {"x": .2, "y": .75}
+
+        Label:
+            markup: True
+            text: "[font=BazookaRegular]Before playing you can select\nthe length of the word\nyou wish to guess[/font]"
+            halign: "center"
+            color: "black"
+            font_size: 20
+            size_hint: 0.6, 0.2
+            pos_hint: {"x": .2, "y": .6}
+        
+        Label:
+            markup: True
+            text: "[font=BazookaRegular]You'll then have 5 lives and\nyou must guess the word\nbefore your lives run out[/font]"
+            halign: "center"
+            color: "black"
+            font_size: 20
+            size_hint: 0.6, 0.2
+            pos_hint: {"x": .2, "y": .4}
+
+        Label:
+            markup: True
+            text: "[font=BazookaRegular]Make 5 mistakes and\nit's game over![/font]"
+            halign: "center"
+            color: "black"
+            font_size: 20
+            size_hint: 0.6, 0.2
+            pos_hint: {"x": .2, "y": .2}
+
+        Button:
+            background_normal: "images/home1.png"
+            background_down: "images/home2.png"
+            size_hint: .222, .1
+            pos_hint: {"x": .39, "y": .1}
+            on_release: root.returnHome()
+
+<WordChoiceScreen>
+    orientation: "vertical"
+
+    FloatLayout:
+        Image:
+            source: "images/homeBgRight.png"
+            size_hint: 1, 1
+        
+        Label:
+            markup: True
+            text: "[font=BazookaRegular]Please select the length of word you would like to guess[/font]"
+            text_size: self.size
+            halign: "center"
+            valign: "middle"
+            color: "black"
+            font_size: 20
+            size_hint: 0.6, 0.2
+            pos_hint: {"x": .2, "y": .72}
+        
+        RoundedButton:
+            markup: True
+            id: 5
+            text: "[font=BazookaRegular]5[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 2/18, "y": .64}
+            on_release: root.goToPlayingScreen(5)
+        
+        RoundedButton:
+            markup: True
+            id: 6
+            text: "[font=BazookaRegular]6[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 7/18, "y": .64}
+            on_release: root.goToPlayingScreen(6)
+
+        RoundedButton:
+            markup: True
+            id: 7
+            text: "[font=BazookaRegular]7[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 12/18, "y": .64}
+            on_release: root.goToPlayingScreen(7)
+
+        RoundedButton:
+            markup: True
+            id: 8
+            text: "[font=BazookaRegular]8[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 2/18, "y": .52}
+            on_release: root.goToPlayingScreen(8)
+
+        RoundedButton:
+            markup: True
+            id: 9
+            text: "[font=BazookaRegular]9[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 7/18, "y": .52}
+            on_release: root.goToPlayingScreen(9)
+
+        RoundedButton:
+            markup: True
+            id: 10
+            text: "[font=BazookaRegular]10[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 12/18, "y": .52}
+            on_release: root.goToPlayingScreen(10)
+
+        RoundedButton:
+            markup: True
+            id: 11
+            text: "[font=BazookaRegular]11[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 2/18, "y": .4}
+            on_release: root.goToPlayingScreen(11)
+
+        RoundedButton:
+            markup: True
+            id: 12
+            text: "[font=BazookaRegular]12[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 7/18, "y": .4}
+            on_release: root.goToPlayingScreen(12)
+        
+        RoundedButton:
+            markup: True
+            id: 13
+            text: "[font=BazookaRegular]13[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 12/18, "y": .4}
+            on_release: root.goToPlayingScreen(13)
+        
+        RoundedButton:
+            markup: True
+            id: 14
+            text: "[font=BazookaRegular]14[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 2/18, "y": .28}
+            on_release: root.goToPlayingScreen(14)
+        
+        RoundedButton:
+            markup: True
+            id: 15
+            text: "[font=BazookaRegular]15[/font]"
+            font_size: 20
+            size_hint: .222, .1
+            pos_hint: {"x": 7/18, "y": .28}
+            on_release: root.goToPlayingScreen(15)
+
+        Button:
+            background_normal: "images/home1.png"
+            background_down: "images/home2.png"
+            size_hint: .222, .1
+            pos_hint: {"x": .39, "y": .15}
+            on_release: root.returnHome()
+
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    canvas.before:
+        Color:
+            rgba: (48/255, 84/255, 150/255, 1) if self.state == "normal" else (48/255, 84/255, 150/255, .8)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [20]
+
+<PlayingScreen>
+    guessChar: guessID
+    orientation: "vertical"
+
+    FloatLayout:
+        Image:
+            source: "images/homeBgRight.png"
+            size_hint: 1, 1
+        
+        Image:
+            id: theMan
+            source: "images/Hangman_Picture1.png"
+            size_hint: .3, .4
+            pos_hint: {"x": .35, "y": .5}
+
+        BoxLayout:
+            size_hint: .5, .15
+            pos_hint: {"x": .25, "y": .2}
+            orientation: "vertical"
+            TextInput:
+                id: guessID
+                halign: "center"
+                valign: "middle"
+                multiline: False
+            Button:
+                id: guessButton
+                markup: True
+                size_hint: 1, 1
+                text: "[font=BazookaRegular]Enter guess[/font]"
+                on_release: root.submitGuess()
+        
+        Label:
+            id: guessesLeft
+            markup: True
+            text: "[font=BazookaRegular]Lives Left:\n5[/font]"
+            color: "black"
+            font_size: 18
+            halign: "center"
+            size_hint: .3, .2
+            pos_hint: {"x": .1, "y":.85}
+        
+        Label:
+            id: display
+            markup: True
+            text: "[font=BazookaRegular]_______________[/font]"
+            color: "black"
+            font_size: 30
+            halign: "center"
+            size_hint: .9, .25
+            pos_hint: {"x": .05, "y":.35}
+
+        Button:
+            id: backButton
+            background_normal: "images/back1.png"
+            background_down: "images/back2.png"
+            size_hint: .222, .1
+            pos_hint: {"x": .39, "y": .05}
+            on_release: root.returnToChoiceScreen()
+
+<GameEndedScreen>:
+    orientation: "vertical"
+
+    FloatLayout:
+        Image:
+            source: "images/homeBgRight.png"
+            size_hint: 1, 1
+        
+        Label:
+            id: header
+            size_hint: .8, .3
+            pos_hint: {"x": .1, "y": .7}
+            markup: True
+            text: "[font=BazookaRegular]YOU LOSE![/font]"
+            font_size: 36
+            halign: "center"
+            colour: "red"
+        
+        Label:
+            id: message
+            size_hint: .8, .2
+            pos_hint: {"x": .1, "y": .5}
+            markup: True
+            text: "[font=BazookaRegular]The correct\nword was[/font]"
+            font_size: 20
+            halign: "center"
+            color: "black"
+        
+        Label:
+            size_hint: .8, .2
+            pos_hint: {"x": .1, "y": .25}
+            markup: True
+            text: "[font=BazookaRegular]Click to go to the home screen or\nstart a new game[/font]"
+            font_size: 18
+            halign: "center"
+            color: "black"
+        
+        Button:
+            background_normal: "images/home1.png"
+            background_down: "images/home2.png"
+            size_hint: 2/9, .1
+            pos_hint: {"x": 2/9, "y": .05}
+            on_release: root.returnHome()
+        
+        Button:
+            background_normal: "images/resume1.png"
+            background_down: "images/resume2.png"
+            size_hint: 2/9, .1
+            pos_hint: {"x": 5/9, "y": .05}
+            on_release: root.returnToChoiceScreen()
