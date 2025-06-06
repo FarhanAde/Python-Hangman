@@ -10,7 +10,7 @@ from kivy.uix.image import Image
 from kivy.uix.screenmanager import ScreenManager, Screen, SlideTransition
 from kivy.properties import ObjectProperty
 from kivy.clock import Clock
-from kivy.core.audio_output import SoundLoader
+from kivy.core.audio import SoundLoader
 
 import random
 
